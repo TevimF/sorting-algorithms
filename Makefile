@@ -18,9 +18,12 @@ OBJ = $(patsubst $(SRC_FOLDER)%.cpp, $(OBJ_FOLDER)%.o, $(SRC))
 $(OBJ_FOLDER)%.o: $(SRC_FOLDER)%.cpp
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I $(INCLUDE_FOLDER)
 
+# Regra para criar a pasta bin, se não existir
+$(shell mkdir -p $(BIN_FOLDER))
+
 #Regra padrão para compilar o programa e ir para a pasta obj
 all: $(OBJ)
-	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER) $(TARGET) $(OBJ)
+	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
 
 #Regra para limpar os arquivos de construção
 clean:
