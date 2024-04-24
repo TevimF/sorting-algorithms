@@ -3,7 +3,7 @@
 #define SHELL_SORT_H
 
 #include "struct.h"
-#include "functions.h"
+#include "function.h"
 
 void shellSort(int *A, int n, sortperf_t * s) {
 }

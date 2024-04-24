@@ -10,6 +10,7 @@
 #include "struct.h"
 #include "main.h"
 
+
 int name2num(char * name){
   int i=0;
   while (algvet[i].num){

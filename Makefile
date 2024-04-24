@@ -21,6 +21,9 @@ $(OBJ_FOLDER)%.o: $(SRC_FOLDER)%.cpp
 # Regra para criar a pasta bin, se não existir
 $(shell mkdir -p $(BIN_FOLDER))
 
+# Diretório de objetos
+$(shell mkdir -p $(OBJ_FOLDER))
+
 #Regra padrão para compilar o programa e ir para a pasta obj
 all: $(OBJ)
 	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)

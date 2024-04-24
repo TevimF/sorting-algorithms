@@ -2,7 +2,7 @@
 #define QUICK_SORT_H
 
 #include "struct.h"
-#include "functions.h"
+#include "function.h"
 
 // quicksort partition using median of 3
 void partition3(int * A, int l, int r, int *i, int *j, sortperf_t *s) {

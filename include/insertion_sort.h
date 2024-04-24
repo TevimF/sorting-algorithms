@@ -2,7 +2,7 @@
 #define INSERTION_SORT_H
 
 #include "struct.h"
-#include "functions.h"
+#include "function.h"
 #include "insertion_sort.h"
 
 //insertion sort

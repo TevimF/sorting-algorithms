@@ -2,7 +2,7 @@
 #define SELECTION_SORT_H
 
 #include "struct.h"
-#include "functions.h"
+#include "function.h"
 
 // recursive selection sort
 void recursiveSelectionSort(int arr[], int l, int r, sortperf_t * s)

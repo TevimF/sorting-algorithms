@@ -8,8 +8,7 @@
 #include <stdio.h>
 #include "../include/main.h"
 #include "../include/struct.h"
-#include "../include/functions.h"
-
+#include "../include/function.h"
 #include "../include/selection_sort.h"
 #include "../include/insertion_sort.h"
 #include "../include/quick_sort.h"
