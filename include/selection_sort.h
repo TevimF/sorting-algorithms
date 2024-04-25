@@ -1,7 +1,7 @@
 #ifndef SELECTION_SORT_H
 #define SELECTION_SORT_H
 
-#include "struct.h"
+#include "main.h"
 #include "function.h"
 
 // recursive selection sort
@@ -30,7 +30,24 @@ void recursiveSelectionSort(int arr[], int l, int r, sortperf_t * s)
 }
 
 // selection sort
-void selectionSort(int arr[], int l, int r, sortperf_t * s) { 
+void selectionSort(int arr[], int l, int r, sortperf_t * s) {
+  // arr é o vetor a ser ordenado
+  // l é o indice do primeiro elemento
+  // r é o indice do ultimo elemento
+  // s é a estrutura de estatisticas
+  inccalls(s,1); // chamou uma vez
+
+  int size = r - l + 1; // tamanho do vetor
+  int menor = l;
+  int aux;
+  for (int indice = l+1; indice < size; indice++){
+    // indice é um 
+    if (indice < menor){
+      menor = indice;
+      inccmp(s, 1);
+    }
+  }
+  
   return;
 }
 

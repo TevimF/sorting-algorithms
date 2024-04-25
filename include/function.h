@@ -7,7 +7,6 @@
 #include <time.h>
 #include <unistd.h>
 #include <math.h>
-#include "struct.h"
 #include "main.h"
 
 

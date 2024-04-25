@@ -1,7 +1,7 @@
 #ifndef QUICK_SORT_H
 #define QUICK_SORT_H
 
-#include "struct.h"
+#include "main.h"
 #include "function.h"
 
 // quicksort partition using median of 3

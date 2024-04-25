@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include "../include/main.h"
-#include "../include/struct.h"
 #include "../include/function.h"
 #include "../include/selection_sort.h"
 #include "../include/insertion_sort.h"
@@ -40,13 +39,13 @@ int main (int argc, char ** argv){
   
   // execute algorithm
   switch (opt.alg){
+     //opt.size é o tamanho do vetor
     case ALGINSERTION:
          insertionSort(vet, 0, opt.size-1, &s);
-         //opt.size é o tamanho do vetor
-         break;
+         break; //acabei de implementar
     case ALGSELECTION:
          selectionSort(vet, 0, opt.size-1, &s);
-         break;
+         break; 
     case ALGQSORT:
          quickSort(vet, 0, opt.size-1, &s);
          break;
@@ -68,8 +67,6 @@ int main (int argc, char ** argv){
   }
   retp = clock_gettime(CLOCK_MONOTONIC, &endtp);
   clkDiff(inittp, endtp, &restp);
-
-
   //if (opt.size<100) printVector(vet, opt.size);
 
   // print stats
