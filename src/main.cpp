@@ -33,8 +33,9 @@ int main (int argc, char ** argv){
   srand48(opt.seed);
   initVector(vet, opt.size);
   vet[opt.size] = vet[0]; // for heapsort
-  //if (opt.size < 100) printVector(vet, opt.size);
-
+  if (opt.size < 100) {
+     printVector(vet, opt.size);
+  }
   retp = clock_gettime(CLOCK_MONOTONIC, &inittp);
   
   // execute algorithm
@@ -67,7 +68,9 @@ int main (int argc, char ** argv){
   }
   retp = clock_gettime(CLOCK_MONOTONIC, &endtp);
   clkDiff(inittp, endtp, &restp);
-  //if (opt.size<100) printVector(vet, opt.size);
+     if (opt.size<100) {
+          printVector(vet, opt.size); 
+     }
 
   // print stats
   sprintf(pref,"alg %s seed %d size %d time %ld.%.9ld",

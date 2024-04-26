@@ -7,18 +7,24 @@
 
 //insertion sort
 void insertionSort(int v[], int l, int r, sortperf_t * s) {
-  // v é o vetor a ser ordenado
-  // l é o indice do primeiro elemento
-  // r é o indice do ultimo elemento
-  // s é a estrutura de estatisticas
-  int size = r - l + 1; // tamanho do vetor
   inccalls(s,1); // incrementa o numero de chamadas de funcao
-  for (int indice_comparado= l+1 ; indice_comparado < size; indice_comparado++){ 
-    // começa do segundo porque o primeiro automaticamente nao se enquadra
-    while ((indice_comparado - 1) >= 1 && v[(indice_comparado - 1)] > v[indice_comparado]){
-      swap(&v[indice_comparado], &v[indice_comparado - 1], s); // troca a chave com o elemento anterior se for maior
+
+  for (int i = l+1; i <= r; i++) {
+    inccmp(s,1); // incrementa o numero de comparacoes
+
+    int chave = v[i];
+    incmove(s,1); // incrementa o numero de movimentacoes
+    int anterior = i-1;
+
+    while (anterior >= l && v[anterior] > chave) {
       inccmp(s,1); 
+      v[anterior+1] = v[anterior];
+
+      incmove(s,1);
+      anterior--;
     }
+    incmove(s,1);
+    v[anterior+1] = chave;
   }
   return;
 }

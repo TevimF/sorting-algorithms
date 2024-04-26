@@ -25,9 +25,10 @@ $(shell mkdir -p $(BIN_FOLDER))
 $(shell mkdir -p $(OBJ_FOLDER))
 
 #Regra padrão para compilar o programa e ir para a pasta obj
-all: $(OBJ)
-	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
+#Executa o clean e depois compila
+all: clean $(OBJ) 
+	$(CC) $(CXXFLAGS) $(OBJ) -o $(BIN_FOLDER)$(TARGET)
 
 #Regra para limpar os arquivos de construção
 clean:
-	@rm -rf $(OBJ_FOLDER)* $(BIN_FOLDER)run.out
+	@rm -f $(OBJ_FOLDER)* $(BIN_FOLDER)*

@@ -36,21 +36,30 @@ void selectionSort(int arr[], int l, int r, sortperf_t * s) {
   // r é o indice do ultimo elemento
   // s é a estrutura de estatisticas
   inccalls(s,1); // chamou uma vez
+  int andamento = l;
+  for (int i = l; i <= r; i++){
+    int menor = i;
+    //printf("menor é: %d\n", arr[menor]);
 
-  int size = r - l + 1; // tamanho do vetor
-  int menor = l;
-  int aux;
-  for (int indice = l+1; indice < size; indice++){
-    // indice é um 
-    if (indice < menor){
-      menor = indice;
+    for (int indice = i+1; indice <= r; indice++){
       inccmp(s, 1);
+
+      // loop para encontrar o menor elemento
+      if (arr[indice] < arr[menor]){
+        menor = indice;
+        //printf("menor agora é: %d\n", arr[menor]);
+      }
     }
-  }
-  
+    if (menor != i){
+      swap(&arr[menor], &arr[andamento], s);
+      //printf("trocando %d com %d\n", arr[menor], arr[andamento]);
+      //printVector(arr, r);
+    }
+    
+    andamento++;
+    //printf("andamento: %d\n", andamento);
+  } 
   return;
 }
-
-
 
 #endif // SELECTION_SORT_H
