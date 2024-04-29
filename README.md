@@ -44,10 +44,11 @@ O programa suporta os seguintes algoritmos de ordenação:
 
 4. Exemplo de uso:
 Por exemplo, para executar o programa com o algoritmo Quick Sort, semente 3 e vetor de tamanho 1000, você pode usar o seguinte comando:
--z 1000 -s 3 -a q
+
+<code>-z 1000 -s 3 -a q</code>
 
 6. Saída:
-O programa fornecerá informações sobre o desempenho do algoritmo de ordenação, incluindo o tempo de execução(time), o número de comparações(cmp), o número de movimentos(move) e o número de chamadas de função(calls).
+O programa fornecerá informações sobre o desempenho do algoritmo de ordenação, incluindo o <b>tempo de execução(time)</b>, o <b>número de comparações(cmp)</b>, o <b>número de movimentos(move)</b> e o <b>número de chamadas de função(calls)</b>.
 
 7. Observações:
 Certifique-se de que os arquivos de inclusão e as implementações dos algoritmos de ordenação estejam corretamente configurados antes de compilar e executar o programa.
