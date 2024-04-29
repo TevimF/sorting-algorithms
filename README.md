@@ -7,9 +7,13 @@ Certifique-se das regras de compilação inseidas no makefile
 2. Uso:
 Para executar o programa, você deve usar o make para compilar o progrma. Em seguida executar o executavel na pasta /bin ./pa1.out
 Em seguida coloque o codigo a seguir:
+
 -z <int>        (vector size)
+
 -s <int>        (initialization seed)
+
 -a <s|i|q|q3|qi|q3i|h|rs>       (algorithm)
+
             s   selection
             i   insertion
             q   quicksort
@@ -18,6 +22,7 @@ Em seguida coloque o codigo a seguir:
             q3i quicksort+median3+insertion
             h   heapsort
             rs  recursive selection
+   
 ficaria parecido com isso:
 ./pa1.out -z 10 -s 1 -a q
 
