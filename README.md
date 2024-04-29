@@ -1,4 +1,4 @@
-Este programa foi desenvolvido para avaliar o desempenho de algoritmos de ordenação. Abaixo estão algumas informações importantes sobre o funcionamento e a utilização do programa:
+Este programa foi desenvolvido em uma atividade da faculdade para avaliar o desempenho de algoritmos de ordenação. Abaixo estão algumas informações importantes sobre o funcionamento e a utilização do programa:
 
 1. Compilação:
 Certifique-se de que todos os arquivos de inclusão necessários estão corretamente configurados no diretório "../include" e que todas as implementações dos algoritmos de ordenação estão presentes. Você pode compilar o programa usando um comando semelhante ao seguinte:
