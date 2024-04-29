@@ -18,8 +18,8 @@ void insertionSort(int v[], int l, int r, sortperf_t * s) {
 
     while (anterior >= l && v[anterior] > chave) {
       inccmp(s,1); 
-      v[anterior+1] = v[anterior];
 
+      v[anterior+1] = v[anterior];
       incmove(s,1);
       anterior--;
     }
