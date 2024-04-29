@@ -24,7 +24,7 @@ Em seguida coloque o codigo a seguir:
             rs  recursive selection
    
 ficaria parecido com isso:
-./pa1.out -z 10 -s 1 -a q
+<code>./pa1.out -z 10 -s 1 -a q</code>
 
 Onde:
 - <algoritmo> é o algoritmo de ordenação a ser avaliado (veja as opções disponíveis no arquivo "main.h").
