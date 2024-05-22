@@ -1,10 +1,11 @@
 Este programa foi desenvolvido em uma atividade da faculdade para avaliar o desempenho de algoritmos de ordenação. Abaixo estão algumas informações importantes sobre o funcionamento e a utilização do programa:
 
 1. Compilação:
-Certifique-se de que todos os arquivos de inclusão necessários estão corretamente configurados no diretório "../include" e que todas as implementações dos algoritmos de ordenação estão presentes. Você pode compilar o programa usando um comando semelhante ao seguinte:
-Certifique-se das regras de compilação inseidas no makefile
+Certifique-se de que todos os arquivos de inclusão necessários estão corretamente configurados no diretório "../include" e que todas as implementações dos algoritmos de ordenação estão presentes.
 
-2. Uso:
+Certifique-se também das regras de compilação inseidas no makefile
+
+3. Uso:
 Para executar o programa, você deve usar o make para compilar o progrma. Em seguida executar o executavel na pasta /bin ./pa1.out
 Em seguida coloque o codigo a seguir:
 
