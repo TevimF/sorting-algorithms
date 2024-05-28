@@ -10,6 +10,11 @@
 #define ALGQSORT3INS 6
 #define ALGSHELLSORT 7
 #define ALGRECSEL    8
+#define ALGBUBBLESORT 9
+#define ALGMERGESORT 10
+#define COUNTINGSORT 11
+#define RADIXSORT    12
+#define BUCKETSORT   13
 
 typedef struct alg{
   int num;
@@ -25,6 +30,11 @@ alg_t algvet[]={
   {ALGQSORT3INS,"q3i"},
   {ALGSHELLSORT,"h"},
   {ALGRECSEL,"rs"},
+  {ALGBUBBLESORT,"b"},
+  {ALGMERGESORT,"m"},
+  {COUNTINGSORT,"c"},
+  {RADIXSORT,"rx"},
+  {BUCKETSORT,"bk"},
   {0,0}
 };
 int name2num(char * name);
@@ -91,7 +101,7 @@ void uso()
   fprintf(stderr,"sortperf\n");
   fprintf(stderr,"\t-z <int>\t(vector size)\n");
   fprintf(stderr,"\t-s <int>\t(initialization seed)\n");
-  fprintf(stderr,"\t-a <s|i|q|q3|qi|q3i|h|rs>\t(algorithm)\n");
+  fprintf(stderr,"\t-a <s|i|q|q3|qi|q3i|h|rs|b|m|c|rx|bk>\t(algorithm)\n");
   fprintf(stderr,"\t    s\tselection\n");
   fprintf(stderr,"\t    i\tinsertion\n");
   fprintf(stderr,"\t    q\tquicksort\n");
@@ -100,6 +110,11 @@ void uso()
   fprintf(stderr,"\t    q3i\tquicksort+median3+insertion\n");
   fprintf(stderr,"\t    h\theapsort\n");
   fprintf(stderr,"\t    rs\trecursive selection\n");
+  fprintf(stderr,"\t    b\tbubblesort\n");
+  fprintf(stderr,"\t    m\tmergesort\n");
+  fprintf(stderr,"\t    c\tcountingsort\n");
+  fprintf(stderr,"\t    rx\tradixsort\n");
+  fprintf(stderr,"\t    bk\tbucketsort\n");
 }
 
 #endif // MAIN_H

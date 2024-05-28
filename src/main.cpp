@@ -12,8 +12,15 @@
 #include "../include/insertion_sort.h"
 #include "../include/quick_sort.h"
 #include "../include/shell_sort.h"
+#include "../include/bubble_sort.h"
+#include "../include/merge_sort.h"
+#include "../include/counting_sort.h"
+#include "../include/radix_sort.h"
+#include "../include/bucket_sort.h"
+
 
 int main (int argc, char ** argv){
+
   sortperf_t s;
   int * vet;
   char buf[200];
@@ -33,7 +40,7 @@ int main (int argc, char ** argv){
   srand48(opt.seed);
   initVector(vet, opt.size);
   vet[opt.size] = vet[0]; // for heapsort
-  if (opt.size < 100) {
+  if (opt.size < 20) {
      printVector(vet, opt.size);
   }
   retp = clock_gettime(CLOCK_MONOTONIC, &inittp);
@@ -65,10 +72,25 @@ int main (int argc, char ** argv){
     case ALGRECSEL:
          recursiveSelectionSort(vet, 0, opt.size-1, &s);
          break;
+     case ALGBUBBLESORT:
+          bubbleSort(vet, 0, opt.size-1, &s);
+          break;
+     case ALGMERGESORT:
+          mergeSort(vet, 0, opt.size-1, &s);
+          break;
+     case COUNTINGSORT:
+          countingSort(vet, 0, opt.size-1, &s);
+          break;
+     case RADIXSORT:
+          radixSort(vet, 0, opt.size-1, &s);
+          break;
+     case BUCKETSORT:
+          bucketSort(vet, 0, opt.size-1, &s);
+          break;
   }
   retp = clock_gettime(CLOCK_MONOTONIC, &endtp);
   clkDiff(inittp, endtp, &restp);
-     if (opt.size<100) {
+     if (opt.size<20) {
           printVector(vet, opt.size); 
      }
 

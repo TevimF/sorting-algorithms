@@ -3,7 +3,6 @@
 
 #include "main.h"
 #include "function.h"
-#include "insertion_sort.h"
 
 //insertion sort
 void insertionSort(int v[], int l, int r, sortperf_t * s) {
