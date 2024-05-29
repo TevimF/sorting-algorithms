@@ -226,5 +226,6 @@
       "WEBPUSH"
     ],
     "workbench.colorTheme": "Min Dark",
-    "workbench.statusBar.visible": true
+    "workbench.statusBar.visible": true,
+    "C_Cpp.dimInactiveRegions": false
   }

@@ -17,6 +17,7 @@
 #include "../include/counting_sort.h"
 #include "../include/radix_sort.h"
 #include "../include/bucket_sort.h"
+#include "../include/estevao_sort.h"
 
 
 int main (int argc, char ** argv){
@@ -86,6 +87,9 @@ int main (int argc, char ** argv){
           break;
      case BUCKETSORT:
           bucketSort(vet, 0, opt.size-1, &s);
+          break;
+     case ESTEVAOSORT:
+          estevao_sort(vet, 0, opt.size-1, &s);
           break;
   }
   retp = clock_gettime(CLOCK_MONOTONIC, &endtp);

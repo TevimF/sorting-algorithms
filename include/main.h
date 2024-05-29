@@ -15,6 +15,7 @@
 #define COUNTINGSORT 11
 #define RADIXSORT    12
 #define BUCKETSORT   13
+#define ESTEVAOSORT  14
 
 typedef struct alg{
   int num;
@@ -35,6 +36,7 @@ alg_t algvet[]={
   {COUNTINGSORT,"c"},
   {RADIXSORT,"rx"},
   {BUCKETSORT,"bk"},
+  {ESTEVAOSORT,"es"},
   {0,0}
 };
 int name2num(char * name);
@@ -108,13 +110,14 @@ void uso()
   fprintf(stderr,"\t    q3\tquicksort+median3\n");
   fprintf(stderr,"\t    qi\tquicksort+insertion\n");
   fprintf(stderr,"\t    q3i\tquicksort+median3+insertion\n");
-  fprintf(stderr,"\t    h\theapsort\n");
+  fprintf(stderr,"\t    h\tshellsort\n");
   fprintf(stderr,"\t    rs\trecursive selection\n");
   fprintf(stderr,"\t    b\tbubblesort\n");
   fprintf(stderr,"\t    m\tmergesort\n");
   fprintf(stderr,"\t    c\tcountingsort\n");
   fprintf(stderr,"\t    rx\tradixsort\n");
   fprintf(stderr,"\t    bk\tbucketsort\n");
+  fprintf(stderr,"\t    es\testevasort\n");
 }
 
 #endif // MAIN_H
