@@ -50,6 +50,7 @@ void partition(int * A, int l, int r, int *i, int *j, sortperf_t *s) {
       (*i)++;
     }
     inccmp(s, 2);
+    // se o ponteiro i for menor que o j, troca os elementos (não é o valor do ponteiro, é a posicao que ele aponta)
     if (*j >= *i ){
       swap(&A[*i], &A[*j], s);
       (*i)++;
@@ -61,7 +62,6 @@ void partition(int * A, int l, int r, int *i, int *j, sortperf_t *s) {
 // standard quicksort
 void quickSort(int * A, int l, int r, sortperf_t *s) { 
   inccalls(s, 1);
-
   int inicio, fim;
 
   partition(A, l, r, &inicio, &fim, s);
