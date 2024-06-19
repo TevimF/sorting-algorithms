@@ -13,12 +13,20 @@ void bucketSort(int * vet, int begin, int end, sortperf_t * s){
   for (int i = begin; i <= end; i++){
     baldes[vet[i]]++;
   }
-  for (int i = 0, j = 0; j < MAX; j++){
-    for (int k = 0; k < baldes[j]; k++){
-      vet[i++] = j;
-      incmove(s,1);
+  for (int i = 0; i < MAX; i++) {
+        int tamanhoBalde = baldes[i];
+        for (int j = 1; j < tamanhoBalde; j++) {
+            int atual = vet[i + j];
+            int indice = j - 1;
+
+            while (indice >= 0 && vet[i + indice] > atual) {
+                vet[i + indice + 1] = vet[i + indice];
+                indice--;
+            }
+
+            vet[i + indice + 1] = atual;
+        }
     }
-  }
 }
 
 #endif // BUCKET_SORT_H
